@@ -1,0 +1,11 @@
+<h2>Ng Switch: </h2>
+<button (click)="change()">Change component </button>
+
+<hr>
+
+<div [ngSwitch]="currentComponent">
+  <app-a *ngSwitchCase="'a'"></app-a>
+  <app-b *ngSwitchCase="'b'"></app-b>
+  <app-c *ngSwitchCase="'c'"></app-c>
+  <app-default *ngSwitchDefault></app-default>
+</div>

@@ -1,0 +1,17 @@
+<h2>Without trackby : </h2>
+<ul>
+  <li *ngFor="let e of array;">
+    {{e.id}} - {{e.name}}
+  </li>
+</ul>
+
+<h2>with track by :</h2>
+<ul>
+  <li *ngFor="let e of array; trackBy: identify">
+    {{e.id}} - {{e.name}}
+  </li>
+</ul>
+
+<button (click)="createChangeId()">create change id</button> ---
+<button (click)="createSameId()">create same id</button> ----
+<button (click)="change()">Change</button>

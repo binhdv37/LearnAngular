@@ -1,0 +1,14 @@
+<div *ngFor="let hero of (heroes | flyingHeros)">
+  {{hero.name}}
+</div>
+<hr>
+<div *ngFor="let hero of (heroes)">
+  {{hero.name}}
+</div>
+<hr>
+<div>
+  Hero name : <input type="text" #name> <br/>
+  Hero power : <input type="text" #power> <br/>
+  Hero can fly ?  : <input type="radio" #canFly> <br/>
+  <button (click)="addHero(name.value, power.value, canFly.value === 'on' ? true : false)">Add new hero</button>
+</div>
